@@ -1,19 +1,18 @@
 import React from "react";
+import './NavButton.css';
 
 interface NavButtonProps {
     label: string;
-    onClick: () => void;
     isActive: boolean;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ label, onClick, isActive }) => {
+const NavButton: React.FC<NavButtonProps> = ({ label, isActive }) => {
     return (
-        <button
+        <div
             className={`nav-button ${isActive ? 'active' : ''}`}
-            onClick={onClick}
         >
             {label}
-        </button>
+        </div>
     );
 }
 
