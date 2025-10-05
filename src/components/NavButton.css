@@ -16,3 +16,7 @@
     background-color: rgb(33, 58, 40);
     transform: scale(1.05);
 }
+
+.nav-button.active{
+    background-color: #4b6b52;
+}
