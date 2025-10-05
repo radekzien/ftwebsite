@@ -1,0 +1,8 @@
+nav-button {
+    background-color: green;
+}
+
+nav-button.hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
