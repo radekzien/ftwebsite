@@ -1,22 +1,23 @@
-.nav-button{
-  padding: 10px 18px;
+.nav-button {
+  display: flex;
+  align-items: center; 
+  padding: 0 50px;
+  height: 99%;
+  font-size: medium;
   margin: 0 10px;
-  background-color: #1e3525;
-  color: white;
-  border-radius: 6px;
+  color: #1e3525;
   cursor: pointer;
   font-weight: 500;
   user-select: none;
-  transition: background-color 0.2s, transform 0.1s;
-  width: fit-content;
-  text-align: center;
+  width: 70px;
 }
 
 .nav-button:hover{
-    background-color: rgb(33, 58, 40);
-    transform: scale(1.05);
+  color: #417652;
+  border-bottom: 4px solid #417652;
 }
 
 .nav-button.active{
-    background-color: #4b6b52;
+  color: #79cf93;
+  border-bottom: 4px solid #79cf93;
 }

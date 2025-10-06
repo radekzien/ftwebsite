@@ -1,11 +1,13 @@
 .nav-bar a {
   text-decoration: none;
 }
+
 .nav-bar {
+  border-bottom: 1px solid #1e3525;
+  height: fit-content;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
+  align-items: stretch;
+  position: relative;
 }
 
 .header {
@@ -17,10 +19,16 @@
 .name-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
 }
 
 .logo{
-    height: 120px;
+    height: 75px;
     width: auto;
+}
+
+.logo-text{
+    height: 75px;
+    width: auto;  
 }
