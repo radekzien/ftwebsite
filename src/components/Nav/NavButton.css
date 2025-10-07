@@ -1,7 +1,8 @@
 .nav-button {
   display: flex;
   align-items: center; 
-  padding: 0 50px;
+  padding: 0 50px 0 50px;
+  justify-content: center;
   height: 99%;
   font-size: medium;
   margin: 0 10px;
@@ -20,4 +21,10 @@
 .nav-button.active{
   color: #79cf93;
   border-bottom: 4px solid #79cf93;
+}
+
+@media (max-width:768px){
+  .nav-button{
+    display: none;
+  }
 }
