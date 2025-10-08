@@ -18,6 +18,22 @@
     opacity: 70;
 }
 
+.caption {
+  position: absolute;
+  color: #123f1f;
+  bottom: 10px;
+  left: 10px;
+  opacity: 90%;
+  font-size: 10rem;
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 8px 16px;
+  border-radius: 5px;
+  max-width: 90%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
