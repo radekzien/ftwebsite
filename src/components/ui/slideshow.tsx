@@ -7,15 +7,21 @@ interface SlideshowProps{
     interval?: number,
 }
 
-export default function Slideshow({ images, interval = 3000, captions } : SlideshowProps){
+export default function Slideshow({ images, interval = 5000, captions } : SlideshowProps){
     const[index, setIndex] = useState(0);
-    const [displayedText, setDisplayedText] = useState(""); // what is currently shown
+    const [displayedText, setDisplayedText] = useState("");
     const [charIndex, setCharIndex] = useState(0);
-    /**useEffect(() => {
-        const timer = setInterval(next, interval);
+    const [paused, setPaused] = useState(false);
 
-        return() => clearInterval(timer)
-    }, [interval, images.length])**/
+    useEffect(() => {
+        if(paused){ return;}
+
+        const timer = setInterval(() => {
+            setIndex(prev => (prev + 1) % images.length);
+        }, interval);
+
+        return () => clearInterval(timer);
+    }, [paused, interval, images.length]);
 
     useEffect(() => {
         setDisplayedText(""); 
@@ -38,19 +44,19 @@ export default function Slideshow({ images, interval = 3000, captions } : Slides
   }, [index, captions]);
 
 
-    const next = () => setIndex((index + 1) % images.length);
-    const prev = () => setIndex((index - 1 + images.length) % images.length);
+    const next = () => {setIndex(prev => (prev + 1) % images.length);
+                        setDisplayedText("")}
+    const prev = () => {setIndex(prev => (prev - 1 + images.length) % images.length);
+                        setDisplayedText("");}
 
     return(
-        <div className="slideshow">
+        <div className="slideshow"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}>
             <img src={images[index]} className="slideshow-image"/>
-            <div className="caption">{captions[index]}</div>
+            <div className="caption">{displayedText}</div>
             <button onClick={prev} className="prev">◀</button>
             <button onClick={next} className="next">▶</button>
         </div>
     )
-}
-
-function setDisplayedText(arg0: string) {
-    throw new Error("Function not implemented.");
 }

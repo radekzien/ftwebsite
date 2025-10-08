@@ -5,7 +5,7 @@ export const slideshowImages: string[] = [
 ];
 
 export const slideshowCaptions: string[] = [
-    "Efficient Modern Fleet",
-    "Experienced Drivers",
-    "Friendly Logistics"
+    "Efficient\nFleet",
+    "Experienced\nDrivers",
+    "Friendly\nLogistics"
 ]
