@@ -9,6 +9,7 @@
   align-items: stretch;
   position: relative;
   gap: 35px;
+  z-index: 50;
 }
 
 .header {
