@@ -11,17 +11,14 @@ export default function Slideshow({ images, interval = 5000, captions } : Slides
     const[index, setIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
     const [charIndex, setCharIndex] = useState(0);
-    const [paused, setPaused] = useState(false);
 
     useEffect(() => {
-        if(paused){ return;}
-
         const timer = setInterval(() => {
             setIndex(prev => (prev + 1) % images.length);
         }, interval);
 
         return () => clearInterval(timer);
-    }, [paused, interval, images.length]);
+    }, [interval, images.length]);
 
     useEffect(() => {
         setDisplayedText(""); 
@@ -50,9 +47,7 @@ export default function Slideshow({ images, interval = 5000, captions } : Slides
                         setDisplayedText("");}
 
     return(
-        <div className="slideshow"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}>
+        <div className="slideshow">
             <img src={images[index]} className="slideshow-image"/>
             <div className="caption">{displayedText}</div>
             <button onClick={prev} className="prev">◀</button>

@@ -1,7 +1,7 @@
 import Enquire from "../components/Enquire";
 import HomeInfo from "../components/Home/HomeInfo";
 import NavBar from "../components/Nav/NavBar";
-import Rights from "../components/Rights"
+import Rights from "../components/Footer"
 import Slideshow from "../components/ui/slideshow";
 import {slideshowImages, slideshowCaptions} from "../data/slideshowImages";
 
