@@ -9,6 +9,8 @@ export default function Rights(){
 
             <div className="footer-section-left">
                 <h4>Quick Links</h4>
+                <a href="/Home">Home</a>
+                <a href="/Clients">Home</a>
                 <a href="/About">About</a>
                 <a href="/Contact">Contact</a>
                 <a href="/Privacy">Privacy Policy</a>
