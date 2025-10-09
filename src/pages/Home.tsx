@@ -1,5 +1,7 @@
+import Enquire from "../components/Enquire";
 import HomeInfo from "../components/Home/HomeInfo";
 import NavBar from "../components/Nav/NavBar";
+import Rights from "../components/Rights"
 import Slideshow from "../components/ui/slideshow";
 import {slideshowImages, slideshowCaptions} from "../data/slideshowImages";
 
@@ -9,6 +11,8 @@ export default function Home() {
       <NavBar />
       <Slideshow images={slideshowImages} captions={slideshowCaptions} />
       <HomeInfo />
+      <Enquire />
+      <Rights />
     </div>
   );
 }
