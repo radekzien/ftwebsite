@@ -61,7 +61,7 @@
 
 /*Mobile styling*/
 @media (max-width:768px){
-  .caption{
+  .caption {
     left: 50%;
     bottom: 25%;
     transform: translateX(-50%);
