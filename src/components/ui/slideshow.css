@@ -58,3 +58,18 @@
 .next {
   right: 10px;
 }
+
+/*Mobile styling*/
+@media (max-width:768px){
+  .caption{
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    font-size: 6rem;
+  }
+  .prev, .next {
+    padding: 20px;
+  }
+}

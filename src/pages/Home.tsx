@@ -1,3 +1,4 @@
+import HomeInfo from "../components/Home/HomeInfo";
 import NavBar from "../components/Nav/NavBar";
 import Slideshow from "../components/ui/slideshow";
 import {slideshowImages, slideshowCaptions} from "../data/slideshowImages";
@@ -7,6 +8,7 @@ export default function Home() {
     <div id='root' className="p-4">
       <NavBar />
       <Slideshow images={slideshowImages} captions={slideshowCaptions} />
+      <HomeInfo />
     </div>
   );
 }
