@@ -19,8 +19,8 @@
 }
 
 .nav-button.active{
-  color: #79cf93;
-  border-bottom: 4px solid #79cf93;
+  color: #437552;
+  border-bottom: 4px solid #437552;
 }
 
 @media (max-width:768px){
